@@ -33,6 +33,7 @@ class Artifact(db.Model):
     artif_depository = db.Column(db.VARCHAR(40))
     depository_id = db.Column(db.VARCHAR(40), unique=True)
     description =  db.Column(db.Text)
+    stamp_location_description = db.Column(db.Text)
     artif_g = db.Column(db.VARCHAR(15))
     artif_preservation = db.Column(db.VARCHAR(15))
     munsell_hue = db.Column(db.VARCHAR(7))

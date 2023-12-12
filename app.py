@@ -32,9 +32,6 @@ def get_years():
     years = Artifact.query.with_entities(Artifact.year_exc.distinct()).all()
     year_list = [year[0] for year in years if year[0] is not None]
     return jsonify(year_list)
-    # years = Artifact.query.distinct(Artifact.year_exc).order_by(Artifact.year_exc.desc()).all()
-    # year_list = [int(year.year_exc) for year in years if year.year_exc is not None]
-    # return jsonify(year_list)
 
 @app.route('/get_locations', methods=['GET'])
 def get_locations():
@@ -242,7 +239,6 @@ def get_manufacts():
 def get_ditailes_manufact(id):
     manufact = Manufact.query.get(id)
     return manufact_schema.jsonify(manufact)
-
 
 @app.route('/get_models', methods = ['GET'])
 def get_models():

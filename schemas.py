@@ -20,7 +20,7 @@ manufacts_schema = ManufactSchema(many=True)
 class ArtifactSchema(ma.Schema):
     class Meta:
         fields = ('id', 'site_id', 'manufact_id', 'year_exc', 'unit_exc', 'leader_exc', 'artif_position', 'field_id',
-                  'artif_depository', 'depository_id', 'description', 'artif_g', 'artif_preservation', 'munsell_hue', 
+                  'artif_depository', 'depository_id', 'description', 'stamp_location_description', 'artif_g', 'artif_preservation', 'munsell_hue', 
                   'munsell_value', 'munsell_chroma', 'munsell_code', 'munsell_name', 
                   'xlink300px_artif', 'xlink1000px_artif', 'zlink300px_artif','zlink1000px_artif',
                   )
